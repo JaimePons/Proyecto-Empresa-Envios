@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"/>
+<title> Entrada de Datos</title>
+<script>
+    function calcula()
+    {
+       let ancho = document.fdatos.ancho.value;
+       let largo = document.fdatos.largo.value;
+       let peso = document.fdatos.peso.value;
+       let altura = document.fdatos.altura.value;
+       let dato =  document.getElementById("lista");
+       let valor = dato.options[lista.selectedIndex].value;  // .text
+        
+       let resultado = ancho * largo * peso * altura * valor;
+       document.getElementById("salida").innerHTML = resultado;    
+    }
+</script>
+</head>
+
+<body>
+    
+<form name="fdatos">
+   Seleccione el tipo de paquete: <select id="lista">
+        <option value="0.75">Lite Box</option>
+        <option value="1">Medium Box</option>
+        <option value="1.25">Big Box</option>
+        <option value="0.50">Little package</option>
+      </select>
+    <br>
+    <br>
+    Ancho del paquete a enviar (cm): <input type="text" size="6" name="ancho">
+    <br>
+    <br>
+    Largo del paquete a enviar (cm): <input type="text" size="6" name="largo">
+    <br>
+    <br>
+    Alto del paquete a enviar (cm): <input type="text" size="6" name="altura">
+    <br>
+    <br>
+    Peso del paquete a enviar (k): <input type="type" size="6" name="peso">
+    <br>
+    <br>
+    <input type="button" value="Calcular" onclick="calcula()"/>
+    <br>
+    <br>
+    
+<div id ="salida"></div>
+</body>
+</html>
+
